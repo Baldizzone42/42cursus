@@ -6,20 +6,20 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:52:18 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/09 17:17:36 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/04/09 17:32:40 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <string.h>
 
 size_t ft_strlen(const char *str)
 {
     size_t i;
 
-    size_t i = 0;
-    while(*str != '\0')
+    i = 0;
+    while(str[i] != '\0')
     {
-        i++   
+        i++;   
     }
     return(i);
 }
