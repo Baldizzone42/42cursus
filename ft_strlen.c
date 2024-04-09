@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 18:34:46 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/09 12:11:51 by jormoral         ###   ########.fr       */
+/*   Created: 2024/04/09 16:52:18 by jormoral          #+#    #+#             */
+/*   Updated: 2024/04/09 17:17:36 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
-{
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-    {
-        return (1);
-    }
-   return (0);
-}
-/*
-#include <stdio.h>
-int main (void)
-{
-    int c;
+#include <unistd.h>
 
-    c = ft_isalpha('A');
-    printf("\n\n%d\n\n\n",c);
-    return(0);
+size_t ft_strlen(const char *str)
+{
+    size_t i;
+
+    size_t i = 0;
+    while(*str != '\0')
+    {
+        i++   
+    }
+    return(i);
 }
-*/
