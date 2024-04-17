@@ -6,7 +6,7 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:57:30 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/09 16:41:45 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/04/10 13:21:21 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int ft_isascii(int c)
     }
     return (0);
 }
-/*
+
 #include <stdio.h>
 int main (void)
 {
@@ -28,4 +28,3 @@ int main (void)
     printf("\n\n%d\n\n\n",c);
     return(0);
 }
-*/

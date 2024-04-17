@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 16:52:18 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/14 17:06:11 by jormoral         ###   ########.fr       */
+/*   Created: 2024/04/10 16:27:18 by jormoral          #+#    #+#             */
+/*   Updated: 2024/04/12 18:49:00 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t ft_strlen(const char *s)
+void *ft_memset(void *b, int c, size_t len)
 {
+    unsigned char *str;
     size_t i;
 
+    str = b;
     i = 0;
-    while(s[i] != '\0')
+    while(i < len)
     {
-        i++;   
+        str[i] = (unsigned char)c;
+        i++;
     }
-    return(i);
+    return(b);
 }
-
 #include <stdio.h>
-
 int main(void)
 {
-    char c[] = "funciona";
-
-
-    printf ("%zu", ft_strlen (c));
-    return (0);
+    char info[4] = "hola";
+    int c = 'j';
+    size_t len = 5;
+    printf("%s", ft_memset(info, c, len));
+    return(0);
 }

@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 16:52:18 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/14 17:06:11 by jormoral         ###   ########.fr       */
+/*   Created: 2024/04/16 09:04:57 by jormoral          #+#    #+#             */
+/*   Updated: 2024/04/17 12:01:04 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include<string.h>
 
-size_t ft_strlen(const char *s)
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-    size_t i;
+    size_t	i;
 
-    i = 0;
-    while(s[i] != '\0')
-    {
-        i++;   
-    }
-    return(i);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-    char c[] = "funciona";
-
-
-    printf ("%zu", ft_strlen (c));
-    return (0);
+	i = 0;
+	if (dstsize == 0)
+	{
+		while (src[i])
+			i++;
+		return (i);
+	}
+	while (i < dstsize - 1 && src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	if (i < dstsize)
+		dst[i] = '\0';
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }
