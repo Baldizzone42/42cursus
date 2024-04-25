@@ -6,10 +6,11 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:33:22 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/09 18:16:59 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/04/17 20:01:42 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int ft_isprint (int c)
 {
     if(c >= 32 && c <= 126)

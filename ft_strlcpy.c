@@ -6,11 +6,12 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 09:04:57 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/17 12:01:04 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:38:26 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
+
+#include "libft.h"
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
