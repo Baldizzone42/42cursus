@@ -6,7 +6,7 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:40:47 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/25 18:47:29 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/04/25 19:01:45 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,21 @@
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    const char *dst;
-    const char *src;
+    const unsigned char *dst;
+    const unsigned char *src;
     size_t i;
     
 
-    dst = (const char *)s1;
-    src = (const char *)s2;
+    dst = (const unsigned char *)s1;
+    src = (const unsigned char *)s2;
     i = 0;
-    while(i < n && dst[i] != '\0' && src[i] != '\0')
+    while(i < n)
     {
-        if (dst[i] == src[i])
+        while (dst[i] != src[i])
         {
-            return(0);
+            return(dst[i]- src[i]);
         }
-        else
-        {
-            return (dst[i] - src[i]);
-        }
+        i++;
     }
-    return(NULL);
+     return(0);
 }

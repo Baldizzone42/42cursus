@@ -112,4 +112,14 @@
         }
         return (NULL);
     }
+
+
+int main(void)
+{
+    const char p[]= "funciona";
+    char p2[] = "";
+    printf("%s", ft_strdup(p));
+    return (0);
+}
 }*/
+ 
