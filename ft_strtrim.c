@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 22:23:29 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/30 22:23:30 by jormoral         ###   ########.fr       */
+/*   Created: 2024/05/03 17:51:33 by jormoral          #+#    #+#             */
+/*   Updated: 2024/05/03 19:00:16 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int ft_tolower(int c)
+char *ft_strtrim(char const *s1, char const *set)
 {
-    if(c >= 65 && c <= 90)
+    char *sub;
+    size_t i;
+    size_t f;
+
+    f = ft_strlen(s1);
+    i = 0;
+    while (ft_strchr(set, s1[i]) != NULL && i < f)
     {
-        c += 32;
+        i++;
     }
-    return(c);
-}
+    while (ft_strchr (set, s1[f]) != NULL && i < f)
+    {
+        f--;
+    }
+    sub = malloc (f - i + 2);
+    if (!sub)
+    {
+        return (NULL);
+    }
+    ft_strlcpy(sub, &s1[i], f - i + 2);
+    return (sub);
+ }

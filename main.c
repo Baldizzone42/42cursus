@@ -121,5 +121,14 @@ int main(void)
     printf("%s", ft_strdup(p));
     return (0);
 }
+
+int main(void)
+{
+    char str[] = "Hola";
+    char str2[] = "Paco";
+    printf("%s", ft_strjoin(str, str2));
+    return(0);
+}
+
 }*/
  

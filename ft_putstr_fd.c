@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 22:23:29 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/30 22:23:30 by jormoral         ###   ########.fr       */
+/*   Created: 2024/05/04 09:01:48 by jormoral          #+#    #+#             */
+/*   Updated: 2024/05/04 09:13:09 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int ft_tolower(int c)
+void ft_putstr_fd(char *s, int fd)
 {
-    if(c >= 65 && c <= 90)
+    int i;
+
+    i = 0;
+    while (s[i] != '\0')
     {
-        c += 32;
+        ft_putchar_fd (s[i], fd);
+        i++;
     }
-    return(c);
 }

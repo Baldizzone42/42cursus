@@ -6,7 +6,7 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:38:12 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/24 19:09:00 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/04/30 22:43:10 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void *ft_memmove(void *dst, const void *src, size_t len)
     b = (const char *)src;
     i = 0;
 
+    if(!dst && !src)
+        return(NULL);
     if (b < a)
     {
         i = len;
