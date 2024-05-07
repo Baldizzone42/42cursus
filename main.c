@@ -129,6 +129,31 @@ int main(void)
     printf("%s", ft_strjoin(str, str2));
     return(0);
 }
+static size_t ft_count(const char *s, char c)
+{
+    size_t count;
+    size_t i;
+    
+    i = 0;
+    if ((s[0] != c) && (s[0] != '\0'))
+    {
+        count = 1;
+    }
+    while (s[i] != '\0')
+    {
+        if ((s[i] == c) && (s[i + 1] != c) && (s[i + 1] != '\0'))
+            count++;
+    i++;
+    }
+    return(count);
+}
 
+int main (void)
+{
+    char c = '_';
+    printf("%zu", ft_count("fuckin_split_y_su_padre", c));
+    
+    return(0);
+}
 }*/
  

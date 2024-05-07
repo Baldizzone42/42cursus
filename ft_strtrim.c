@@ -6,7 +6,7 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 17:51:33 by jormoral          #+#    #+#             */
-/*   Updated: 2024/05/03 19:00:16 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/05/06 19:48:43 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,4 @@ char *ft_strtrim(char const *s1, char const *set)
     ft_strlcpy(sub, &s1[i], f - i + 2);
     return (sub);
  }
+ 

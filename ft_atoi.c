@@ -6,13 +6,13 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 08:31:51 by jormoral          #+#    #+#             */
-/*   Updated: 2024/04/29 16:24:56 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/05/07 08:57:14 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int ft_atoi (const char *str)
 {
     int i;
     int result;
