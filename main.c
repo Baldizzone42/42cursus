@@ -155,5 +155,20 @@ int main (void)
     
     return(0);
 }
+
+/* #include "libft.h"
+
+t_list *ft_lstnew(void *content)
+{
+    t_list  *new;
+
+    new = malloc(sizeof(struct s_list));
+    if (!new)
+    {
+        free(new);
+        return(NULL);
+    }
+    return(new);
+} */
 }*/
  

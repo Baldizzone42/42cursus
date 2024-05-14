@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:20:59 by jormoral          #+#    #+#             */
-/*   Updated: 2024/05/14 18:43:44 by jormoral         ###   ########.fr       */
+/*   Created: 2024/05/13 16:54:27 by jormoral          #+#    #+#             */
+/*   Updated: 2024/05/14 17:49:36 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstnew(void *content)
 {
-	char	*sub;
-	size_t	i;
+	t_list	*lst;
 
-	i = 0;
-	if (start > ft_strlen(s))
-		len = 0;
-	if (len > ft_strlen(s) - start)
-		len = (ft_strlen(s) - start);
-	sub = malloc(len + 1);
-	if (!s || !sub)
-	{
+	lst = malloc(sizeof(struct s_list));
+	if (!lst)
 		return (NULL);
-	}
-	while (s[i] != '\0' && i < len)
-	{
-		sub[i] = s[start];
-		i++;
-		start++;
-	}
-	sub[i] = '\0';
-	return (sub);
+	lst->content = content;
+	lst->next = NULL;
+	return (lst);
 }

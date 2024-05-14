@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 14:20:59 by jormoral          #+#    #+#             */
-/*   Updated: 2024/05/14 18:43:44 by jormoral         ###   ########.fr       */
+/*   Created: 2024/05/13 18:45:44 by jormoral          #+#    #+#             */
+/*   Updated: 2024/05/14 17:42:33 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char	*sub;
-	size_t	i;
+	t_list	*ult;
 
-	i = 0;
-	if (start > ft_strlen(s))
-		len = 0;
-	if (len > ft_strlen(s) - start)
-		len = (ft_strlen(s) - start);
-	sub = malloc(len + 1);
-	if (!s || !sub)
+	if (*lst == NULL)
+		(*lst) = new;
+	else
 	{
-		return (NULL);
+		ult = *lst;
+		while (ult->next != NULL)
+			ult = ult->next;
+		(ult)->next = new;
 	}
-	while (s[i] != '\0' && i < len)
-	{
-		sub[i] = s[start];
-		i++;
-		start++;
-	}
-	sub[i] = '\0';
-	return (sub);
 }

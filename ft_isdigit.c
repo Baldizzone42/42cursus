@@ -6,16 +6,17 @@
 /*   By: jormoral <jormoral@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 11:24:03 by jormoral          #+#    #+#             */
-/*   Updated: 2024/05/06 19:48:31 by jormoral         ###   ########.fr       */
+/*   Updated: 2024/05/14 16:58:14 by jormoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isdigit(int c)
+
+int	ft_isdigit(int c)
 {
-    if(c >= '0' && c <= '9')
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	return (0);
 }
